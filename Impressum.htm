@@ -1,372 +1,354 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SylaKultury - Rechtliches</title>
-  <meta name="description" content="Impressum und Datenschutzerklärung von SylaKultury Kultur- und Eventmanagement." />
-  <style>
-    :root{
-      --bg:#0b1220;
-      --card:rgba(255,255,255,.06);
-      --card2:rgba(255,255,255,.04);
-      --text:#eaf0ff;
-      --muted:#b9c6e3;
-      --line:rgba(255,255,255,.12);
-      --accent:#8bb4ff;
-      --accent2:#7cf0c2;
-      --shadow: 0 18px 50px rgba(0,0,0,.38);
-      --radius: 18px;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      background:
-        radial-gradient(1200px 700px at 15% 5%, rgba(139,180,255,.18), transparent 62%),
-        radial-gradient(900px 650px at 85% 0%, rgba(124,240,194,.12), transparent 58%),
-        radial-gradient(900px 650px at 55% 100%, rgba(168,139,255,.10), transparent 60%),
-        var(--bg);
-      color:var(--text);
-      line-height:1.6;
-    }
-    a{color:var(--accent); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{
-      max-width: 1060px;
-      margin: 0 auto;
-      padding: 42px 16px 64px;
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SylaKultury - Impressum & Datenschutzerklärung</title>
+<meta name="description" content="Impressum und Datenschutzerklärung von SylaKultury Kulturmanagement.">
 
-    .top{
-      display:flex;
-      gap:14px;
-      align-items:center;
-      justify-content:space-between;
-      margin-bottom: 18px;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      min-width: 220px;
-    }
-    .logo{
-      width:38px;height:38px;
-      border-radius: 12px;
-      background:
-        linear-gradient(135deg, rgba(139,180,255,.95), rgba(124,240,194,.85));
-      box-shadow: 0 12px 25px rgba(0,0,0,.25);
-      border:1px solid rgba(255,255,255,.16);
-    }
-    .brand h1{
-      margin:0;
-      font-size: 16px;
-      letter-spacing:.3px;
-      line-height:1.2;
-    }
-    .brand .sub{
-      display:block;
-      font-size: 12px;
-      color: var(--muted);
-      margin-top: 2px;
-      letter-spacing:.2px;
-    }
-    .nav{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-    .chip{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding: 10px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      color: var(--text);
-      font-size: 13px;
-      transition: transform .15s ease, background .15s ease;
-      white-space:nowrap;
-    }
-    .chip:hover{
-      background: rgba(255,255,255,.06);
-      transform: translateY(-1px);
-      text-decoration:none;
-    }
-    .chip .dot{
-      width:8px;height:8px;border-radius:99px;
-      background: var(--accent2);
-      box-shadow: 0 0 0 4px rgba(124,240,194,.12);
-    }
-
-    .grid{
-      margin-top: 18px;
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 18px;
-    }
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-    .card header{
-      padding: 18px 20px 14px;
-      border-bottom: 1px solid var(--line);
-      background: rgba(15,26,51,.42);
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap:12px;
-    }
-    .card header h3{
-      margin:0;
-      font-size: 16px;
-      letter-spacing:.2px;
-    }
-    .tag{
-      display:inline-flex;
-      align-items:center;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      color: var(--muted);
-      font-size: 12px;
-      white-space:nowrap;
-    }
-    .card .content{
-      padding: 18px 20px 22px;
-    }
-
-    .table{
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      overflow:hidden;
-      background: rgba(15,26,51,.32);
-    }
-    .table tr:not(:last-child) td,
-    .table tr:not(:last-child) th{
-      border-bottom: 1px solid var(--line);
-    }
-    .table th{
-      width: 260px;
-      text-align:left;
-      padding: 12px 12px;
-      color: var(--muted);
-      font-weight: 650;
-      background: rgba(255,255,255,.03);
-      vertical-align: top;
-    }
-    .table td{
-      padding: 12px 12px;
-      vertical-align: top;
-      color: var(--text);
-    }
-
-    .notice{
-      margin-top: 12px;
-      padding: 12px 12px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      color: var(--muted);
-      font-size: 13px;
-    }
-    .list{
-      margin: 10px 0 0;
-      padding-left: 18px;
-      color: var(--text);
-    }
-    .list li{margin: 6px 0}
-    .muted{color:var(--muted)}
-    .sep{
-      height:1px;
-      background: var(--line);
-      margin: 16px 0;
-      border:0;
-    }
-
-    footer.site{
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: 12.5px;
-      text-align:center;
-      opacity:.92;
-    }
-  </style>
+<style>
+:root{
+--bg:#0b1220;
+--card:rgba(255,255,255,.06);
+--card2:rgba(255,255,255,.04);
+--text:#eaf0ff;
+--muted:#b9c6e3;
+--line:rgba(255,255,255,.12);
+--accent:#8bb4ff;
+--accent2:#7cf0c2;
+--radius:18px;
+--shadow:0 18px 50px rgba(0,0,0,.38);
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+background:
+radial-gradient(1200px 700px at 15% 5%, rgba(139,180,255,.18), transparent 62%),
+radial-gradient(900px 650px at 85% 0%, rgba(124,240,194,.12), transparent 58%),
+var(--bg);
+color:var(--text);
+line-height:1.6;
+}
+.wrap{
+max-width:1000px;
+margin:auto;
+padding:40px 16px 60px;
+}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+.top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+flex-wrap:wrap;
+gap:10px;
+}
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+}
+.logo{
+width:38px;
+height:38px;
+border-radius:12px;
+background:linear-gradient(135deg,#8bb4ff,#7cf0c2);
+}
+.brand h1{margin:0;font-size:16px;}
+.brand span{display:block;font-size:12px;color:var(--muted);}
+.nav{display:flex;gap:10px;}
+.chip{
+padding:10px 14px;
+border-radius:999px;
+border:1px solid var(--line);
+background:rgba(255,255,255,.03);
+font-size:13px;
+}
+.grid{display:grid;gap:20px;}
+.card{
+background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));
+border:1px solid var(--line);
+border-radius:var(--radius);
+box-shadow:var(--shadow);
+overflow:hidden;
+}
+.card header{
+padding:18px 20px;
+border-bottom:1px solid var(--line);
+background:rgba(15,26,51,.4);
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.card header h2{margin:0;font-size:16px;}
+.tag{
+font-size:12px;
+color:var(--muted);
+border:1px solid var(--line);
+padding:4px 10px;
+border-radius:999px;
+}
+.content{padding:18px 20px 24px;}
+.table{
+width:100%;
+border-collapse:collapse;
+border:1px solid var(--line);
+border-radius:12px;
+overflow:hidden;
+background:rgba(15,26,51,.35);
+}
+.table th{
+text-align:left;
+padding:12px;
+width:250px;
+background:rgba(255,255,255,.03);
+color:var(--muted);
+}
+.table td{padding:12px;}
+.sep{
+height:1px;
+background:var(--line);
+margin:18px 0;
+border:0;
+}
+.list{padding-left:20px;}
+.list li{margin:6px 0;}
+.notice{
+margin-top:12px;
+padding:12px;
+border:1px solid var(--line);
+border-radius:12px;
+background:rgba(255,255,255,.03);
+color:var(--muted);
+font-size:13px;
+}
+footer{
+text-align:center;
+margin-top:20px;
+font-size:12px;
+color:var(--muted);
+}
+</style>
 </head>
 
 <body>
-  <div class="wrap">
-    <div class="top">
-      <div class="brand">
-        <div class="logo"></div>
-        <div>
-          <h1>SylaKultury<span class="sub">Kultur- und Eventmanagement</span></h1>
-        </div>
-      </div>
+<div class="wrap">
 
-      <nav class="nav">
-        <a class="chip" href="#impressum"><span class="dot"></span>Impressum</a>
-        <a class="chip" href="#datenschutz"><span class="dot"></span>Datenschutz</a>
-      </nav>
-    </div>
+<div class="top">
+<div class="brand">
+<div class="logo"></div>
+<div>
+<h1>SylaKultury</h1>
+<span>Kulturmanagement</span>
+</div>
+</div>
 
-    <div class="grid">
-      <article class="card" id="impressum">
-        <header>
-          <div>
-            <h3>Impressum</h3>
-            <div class="muted" style="font-size:13px; margin-top:4px">Angaben gemäß § 5 TMG</div>
-          </div>
-          <span class="tag">Stand - März 2026</span>
-        </header>
+<nav class="nav">
+<a class="chip" href="#impressum">Impressum</a>
+<a class="chip" href="#datenschutz">Datenschutz</a>
+</nav>
+</div>
 
-        <div class="content">
-          <table class="table">
-            <tr>
-              <th>Unternehmen</th>
-              <td>
-                <strong>SylaKultury Kultur- und Eventmanagement</strong><br>
-                <span class="muted">Einzelunternehmen</span>
-              </td>
-            </tr>
-            <tr>
-              <th>Inhaber</th>
-              <td>Mario Bauer</td>
-            </tr>
-            <tr>
-              <th>Anschrift</th>
-              <td>
-                Talstraße 10<br>
-                04103 Leipzig<br>
-                Deutschland
-              </td>
-            </tr>
-            <tr>
-              <th>Telefon</th>
-              <td><a href="tel:+491603481138">0160-3481138</a></td>
-            </tr>
-            <tr>
-              <th>E-Mail</th>
-              <td><a href="mailto:mario@sylakultury.de">mario@sylakultury.de</a></td>
-            </tr>
-            <tr>
-              <th>Web</th>
-              <td><a href="https://www.sylakultury.de">www.sylakultury.de</a></td>
-            </tr>
-            <tr>
-              <th>Instagram</th>
-              <td><a href="https://www.instagram.com/sylakultury/">instagram.com/sylakultury</a></td>
-            </tr>
-          </table>
+<div class="grid">
 
-          <div class="notice">
-            Umsatzsteuer - Gemäß § 19 Abs. 1 UStG wird als Kleinunternehmer keine Umsatzsteuer erhoben und daher auch nicht ausgewiesen.
-          </div>
+<!-- IMPRESSUM -->
+<article class="card" id="impressum">
+<header>
+<h2>Impressum</h2>
+<span class="tag">Stand - März 2026</span>
+</header>
 
-          <hr class="sep" />
+<div class="content">
 
-          <table class="table">
-            <tr>
-              <th>Verantwortlich für den Inhalt</th>
-              <td>
-                Mario Bauer<br>
-                <span class="muted">§ 18 Abs. 2 MStV</span><br>
-                Talstraße 10 - 04103 Leipzig - Deutschland
-              </td>
-            </tr>
-            <tr>
-              <th>EU-Streitschlichtung</th>
-              <td>
-                Plattform der EU-Kommission zur Online-Streitbeilegung<br>
-                <a href="https://ec.europa.eu/consumers/odr/">ec.europa.eu/consumers/odr</a>
-              </td>
-            </tr>
-            <tr>
-              <th>Verbraucherstreitbeilegung</th>
-              <td>Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</td>
-            </tr>
-          </table>
-        </div>
-      </article>
+<table class="table">
+<tr>
+<th>Unternehmen</th>
+<td>SylaKultury Kulturmanagement<br>Einzelunternehmen</td>
+</tr>
+<tr>
+<th>Inhaber</th>
+<td>Mario Bauer</td>
+</tr>
+<tr>
+<th>Anschrift</th>
+<td>Talstraße 10<br>04103 Leipzig<br>Deutschland</td>
+</tr>
+<tr>
+<th>Telefon</th>
+<td>0160-3481138</td>
+</tr>
+<tr>
+<th>E-Mail</th>
+<td>mario@sylakultury.de</td>
+</tr>
+<tr>
+<th>Website</th>
+<td>www.sylakultury.de</td>
+</tr>
+<tr>
+<th>Instagram</th>
+<td>https://www.instagram.com/sylakultury/</td>
+</tr>
+</table>
 
-      <article class="card" id="datenschutz">
-        <header>
-          <div>
-            <h3>Datenschutzerklärung</h3>
-            <div class="muted" style="font-size:13px; margin-top:4px">Informationen gemäß DSGVO</div>
-          </div>
-          <span class="tag">Stand - März 2026</span>
-        </header>
+<div class="notice">
+Gemäß § 19 Abs. 1 UStG wird als Kleinunternehmer keine Umsatzsteuer erhoben und daher auch nicht ausgewiesen.
+</div>
 
-        <div class="content">
-          <h4>1 - Verantwortlicher</h4>
-          <table class="table">
-            <tr>
-              <th>Unternehmen</th>
-              <td><strong>SylaKultury Kultur- und Eventmanagement</strong></td>
-            </tr>
-            <tr>
-              <th>Inhaber</th>
-              <td>Mario Bauer</td>
-            </tr>
-            <tr>
-              <th>Anschrift</th>
-              <td>Talstraße 10<br>04103 Leipzig<br>Deutschland</td>
-            </tr>
-            <tr>
-              <th>Kontakt</th>
-              <td>
-                Telefon - 0160-3481138<br>
-                E-Mail - mario@sylakultury.de<br>
-                Website - www.sylakultury.de
-              </td>
-            </tr>
-          </table>
+<hr class="sep">
 
-          <hr class="sep" />
+<table class="table">
+<tr>
+<th>Wirtschafts-Identifikationsnummer</th>
+<td>
+Wirtschafts-Identifikationsnummer gemäß § 139c AO:<br>
+DE454171241-00001
+</td>
+</tr>
+</table>
 
-          <h4>2 - Allgemeine Hinweise</h4>
-          <p>Wir verarbeiten personenbezogene Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften.</p>
+<hr class="sep">
 
-          <hr class="sep" />
+<table class="table">
+<tr>
+<th>Registrierung als Kinobetreiber</th>
+<td>
+SylaKultury Kulturmanagement ist als Kinobetreiber im Sinne des Filmförderungsgesetzes (FFG) bei der Filmförderungsanstalt (FFA) registriert und führt Filmvorführungen im Rahmen eines mobilen Kinobetriebs mit Wanderleinwand und wechselnden Spielstätten durch.
+</td>
+</tr>
+<tr>
+<th>Betreibernummer</th>
+<td>4715</td>
+</tr>
+<tr>
+<th>Kinonummer</th>
+<td>4921</td>
+</tr>
+<tr>
+<th>Leinwandnummer</th>
+<td>492101</td>
+</tr>
+</table>
 
-          <h4>3 - Datenerfassung beim Besuch der Website</h4>
-          <ul class="list">
-            <li>IP-Adresse</li>
-            <li>Datum und Uhrzeit des Zugriffs</li>
-            <li>Browsertyp</li>
-            <li>Referrer-URL</li>
-            <li>Provider</li>
-          </ul>
+<hr class="sep">
 
-          <hr class="sep" />
+<table class="table">
+<tr>
+<th>Verantwortlich für Inhalte</th>
+<td>
+Mario Bauer<br>
+Talstraße 10<br>
+04103 Leipzig<br>
+Deutschland<br>
+§ 18 Abs. 2 MStV
+</td>
+</tr>
+<tr>
+<th>EU-Streitschlichtung</th>
+<td>
+https://ec.europa.eu/consumers/odr/
+</td>
+</tr>
+<tr>
+<th>Verbraucherstreitbeilegung</th>
+<td>
+Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+</td>
+</tr>
+</table>
 
-          <h4>4 - Ihre Rechte</h4>
-          <ul class="list">
-            <li>Auskunft - Art. 15 DSGVO</li>
-            <li>Berichtigung - Art. 16 DSGVO</li>
-            <li>Löschung - Art. 17 DSGVO</li>
-            <li>Widerspruch - Art. 21 DSGVO</li>
-          </ul>
-        </div>
-      </article>
-    </div>
+</div>
+</article>
 
-    <footer class="site">
-      SylaKultury Kultur- und Eventmanagement - Leipzig
-    </footer>
-  </div>
+<!-- DATENSCHUTZ -->
+<article class="card" id="datenschutz">
+<header>
+<h2>Datenschutzerklärung</h2>
+<span class="tag">Stand - März 2026</span>
+</header>
+
+<div class="content">
+
+<h3>1 - Verantwortlicher</h3>
+<p>
+SylaKultury Kulturmanagement<br>
+Inhaber - Mario Bauer<br>
+Talstraße 10<br>
+04103 Leipzig<br>
+Deutschland<br>
+Telefon - 0160-3481138<br>
+E-Mail - mario@sylakultury.de
+</p>
+
+<hr class="sep">
+
+<h3>2 - Allgemeine Hinweise zur Datenverarbeitung</h3>
+<p>
+Der Schutz Ihrer personenbezogenen Daten ist uns ein wichtiges Anliegen. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
+</p>
+
+<hr class="sep">
+
+<h3>3 - Nutzung eines Linktree-Profils</h3>
+<p>
+Beim Aufruf unseres Linktree-Profils werden durch den Anbieter technische Daten verarbeitet.
+</p>
+
+<ul class="list">
+<li>IP-Adresse</li>
+<li>Datum und Uhrzeit</li>
+<li>Browsertyp</li>
+<li>Referrer-URL</li>
+</ul>
+
+<p>
+Anbieter - Linktree Pty Ltd<br>
+https://linktr.ee/s/privacy/
+</p>
+
+<hr class="sep">
+
+<h3>4 - Weiterleitung zu externen Webseiten</h3>
+<p>
+Beim Anklicken von Links verlassen Sie unsere Onlinepräsenz. Für die Inhalte der Zielseiten sind ausschließlich deren Betreiber verantwortlich.
+</p>
+
+<hr class="sep">
+
+<h3>5 - Kontaktaufnahme</h3>
+<p>
+Bei Kontaktaufnahme werden Ihre Daten zur Bearbeitung gespeichert.
+</p>
+
+<hr class="sep">
+
+<h3>6 - Ihre Rechte</h3>
+<ul class="list">
+<li>Auskunft</li>
+<li>Berichtigung</li>
+<li>Löschung</li>
+<li>Widerspruch</li>
+</ul>
+
+<hr class="sep">
+
+<h3>7 - Beschwerderecht</h3>
+<p>
+Sächsischer Datenschutzbeauftragter<br>
+https://www.datenschutz.sachsen.de/
+</p>
+
+</div>
+</article>
+
+</div>
+
+<footer>
+SylaKultury Kulturmanagement - Leipzig
+</footer>
+
+</div>
 </body>
 </html>
