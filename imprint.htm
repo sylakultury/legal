@@ -7,10 +7,10 @@
 <meta name="description" content="Impressum und Datenschutzerklärung von SylaKultury Kulturmanagement.">
 
 <style>
-
 :root{
 --bg:#0b1220;
 --card:rgba(255,255,255,.06);
+--card2:rgba(255,255,255,.04);
 --text:#eaf0ff;
 --muted:#b9c6e3;
 --line:rgba(255,255,255,.12);
@@ -19,9 +19,7 @@
 --radius:18px;
 --shadow:0 18px 50px rgba(0,0,0,.38);
 }
-
 *{box-sizing:border-box}
-
 body{
 margin:0;
 font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
@@ -32,9 +30,328 @@ var(--bg);
 color:var(--text);
 line-height:1.6;
 }
-
 .wrap{
 max-width:1000px;
+margin:auto;
+padding:40px 16px 60px;
+}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+.top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+flex-wrap:wrap;
+gap:10px;
+}
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+}
+.logo{
+width:38px;
+height:38px;
+border-radius:12px;
+background:linear-gradient(135deg,#8bb4ff,#7cf0c2);
+}
+.brand h1{margin:0;font-size:16px;}
+.brand span{display:block;font-size:12px;color:var(--muted);}
+.nav{display:flex;gap:10px;}
+.chip{
+padding:10px 14px;
+border-radius:999px;
+border:1px solid var(--line);
+background:rgba(255,255,255,.03);
+font-size:13px;
+}
+.grid{display:grid;gap:20px;}
+.card{
+background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));
+border:1px solid var(--line);
+border-radius:var(--radius);
+box-shadow:var(--shadow);
+overflow:hidden;
+}
+.card header{
+padding:18px 20px;
+border-bottom:1px solid var(--line);
+background:rgba(15,26,51,.4);
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.card header h2{margin:0;font-size:16px;}
+.tag{
+font-size:12px;
+color:var(--muted);
+border:1px solid var(--line);
+padding:4px 10px;
+border-radius:999px;
+}
+.content{padding:18px 20px 24px;}
+.table{
+width:100%;
+border-collapse:collapse;
+border:1px solid var(--line);
+border-radius:12px;
+overflow:hidden;
+background:rgba(15,26,51,.35);
+}
+.table th{
+text-align:left;
+padding:12px;
+width:250px;
+background:rgba(255,255,255,.03);
+color:var(--muted);
+}
+.table td{padding:12px;}
+.sep{
+height:1px;
+background:var(--line);
+margin:18px 0;
+border:0;
+}
+.list{padding-left:20px;}
+.list li{margin:6px 0;}
+.notice{
+margin-top:12px;
+padding:12px;
+border:1px solid var(--line);
+border-radius:12px;
+background:rgba(255,255,255,.03);
+color:var(--muted);
+font-size:13px;
+}
+footer{
+text-align:center;
+margin-top:20px;
+font-size:12px;
+color:var(--muted);
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+<div class="top">
+<div class="brand">
+<div class="logo"></div>
+<div>
+<h1>SylaKultury</h1>
+<span>Kulturmanagement</span>
+</div>
+</div>
+
+<nav class="nav">
+<a class="chip" href="#impressum">Impressum</a>
+<a class="chip" href="#datenschutz">Datenschutz</a>
+</nav>
+</div>
+
+<div class="grid">
+
+<!-- IMPRESSUM -->
+<article class="card" id="impressum">
+<header>
+<h2>Impressum</h2>
+<span class="tag">Stand - März 2026</span>
+</header>
+
+<div class="content">
+
+<table class="table">
+<tr>
+<th>Unternehmen</th>
+<td>SylaKultury Kulturmanagement<br>Einzelunternehmen</td>
+</tr>
+<tr>
+<th>Inhaber</th>
+<td>Mario Bauer</td>
+</tr>
+<tr>
+<th>Anschrift</th>
+<td>Talstraße 10<br>04103 Leipzig<br>Deutschland</td>
+</tr>
+<tr>
+<th>Telefon</th>
+<td>0160-3481138</td>
+</tr>
+<tr>
+<th>E-Mail</th>
+<td>mario@sylakultury.de</td>
+</tr>
+<tr>
+<th>Website</th>
+<td>www.sylakultury.de</td>
+</tr>
+<tr>
+<th>Instagram</th>
+<td>https://www.instagram.com/sylakultury/</td>
+</tr>
+</table>
+
+<div class="notice">
+Gemäß § 19 Abs. 1 UStG wird als Kleinunternehmer keine Umsatzsteuer erhoben und daher auch nicht ausgewiesen.
+</div>
+
+<hr class="sep">
+
+<table class="table">
+<tr>
+<th>Wirtschafts-Identifikationsnummer</th>
+<td>
+Wirtschafts-Identifikationsnummer gemäß § 139c AO:<br>
+DE454171241-00001
+</td>
+</tr>
+</table>
+
+<hr class="sep">
+
+<table class="table">
+<tr>
+<th>Registrierung als Kinobetreiber</th>
+<td>
+SylaKultury Kulturmanagement ist als Kinobetreiber im Sinne des Filmförderungsgesetzes (FFG) bei der Filmförderungsanstalt (FFA) registriert und führt Filmvorführungen im Rahmen eines mobilen Kinobetriebs mit Wanderleinwand und wechselnden Spielstätten durch.
+</td>
+</tr>
+<tr>
+<th>Betreibernummer</th>
+<td>4715</td>
+</tr>
+<tr>
+<th>Kinonummer</th>
+<td>4921</td>
+</tr>
+<tr>
+<th>Leinwandnummer</th>
+<td>492101</td>
+</tr>
+</table>
+
+<hr class="sep">
+
+<table class="table">
+<tr>
+<th>Verantwortlich für Inhalte</th>
+<td>
+Mario Bauer<br>
+Talstraße 10<br>
+04103 Leipzig<br>
+Deutschland<br>
+§ 18 Abs. 2 MStV
+</td>
+</tr>
+<tr>
+<th>EU-Streitschlichtung</th>
+<td>
+https://ec.europa.eu/consumers/odr/
+</td>
+</tr>
+<tr>
+<th>Verbraucherstreitbeilegung</th>
+<td>
+Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+</td>
+</tr>
+</table>
+
+</div>
+</article>
+
+<!-- DATENSCHUTZ -->
+<article class="card" id="datenschutz">
+<header>
+<h2>Datenschutzerklärung</h2>
+<span class="tag">Stand - März 2026</span>
+</header>
+
+<div class="content">
+
+<h3>1 - Verantwortlicher</h3>
+<p>
+SylaKultury Kulturmanagement<br>
+Inhaber - Mario Bauer<br>
+Talstraße 10<br>
+04103 Leipzig<br>
+Deutschland<br>
+Telefon - 0160-3481138<br>
+E-Mail - mario@sylakultury.de
+</p>
+
+<hr class="sep">
+
+<h3>2 - Allgemeine Hinweise zur Datenverarbeitung</h3>
+<p>
+Der Schutz Ihrer personenbezogenen Daten ist uns ein wichtiges Anliegen. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
+</p>
+
+<hr class="sep">
+
+<h3>3 - Nutzung eines Linktree-Profils</h3>
+<p>
+Beim Aufruf unseres Linktree-Profils werden durch den Anbieter technische Daten verarbeitet.
+</p>
+
+<ul class="list">
+<li>IP-Adresse</li>
+<li>Datum und Uhrzeit</li>
+<li>Browsertyp</li>
+<li>Referrer-URL</li>
+</ul>
+
+<p>
+Anbieter - Linktree Pty Ltd<br>
+https://linktr.ee/s/privacy/
+</p>
+
+<hr class="sep">
+
+<h3>4 - Weiterleitung zu externen Webseiten</h3>
+<p>
+Beim Anklicken von Links verlassen Sie unsere Onlinepräsenz. Für die Inhalte der Zielseiten sind ausschließlich deren Betreiber verantwortlich.
+</p>
+
+<hr class="sep">
+
+<h3>5 - Kontaktaufnahme</h3>
+<p>
+Bei Kontaktaufnahme werden Ihre Daten zur Bearbeitung gespeichert.
+</p>
+
+<hr class="sep">
+
+<h3>6 - Ihre Rechte</h3>
+<ul class="list">
+<li>Auskunft</li>
+<li>Berichtigung</li>
+<li>Löschung</li>
+<li>Widerspruch</li>
+</ul>
+
+<hr class="sep">
+
+<h3>7 - Beschwerderecht</h3>
+<p>
+Sächsischer Datenschutzbeauftragter<br>
+https://www.datenschutz.sachsen.de/
+</p>
+
+</div>
+</article>
+
+</div>
+
+<footer>
+SylaKultury Kulturmanagement - Leipzig
+</footer>
+
+</div>
+</body>
+</html>max-width:1000px;
 margin:auto;
 padding:40px 16px 60px;
 }
